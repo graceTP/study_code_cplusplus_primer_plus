@@ -17,7 +17,7 @@ StringBad::StringBad(const char *s)
 		str[i] = s[i]; // copy string to new storage
 	str[len] = '\0'; // terminate string
 	num_strings++; // set object count
-	cout << num_strings << ": \"" << str << "\" object created\n";
+	cout << num_strings << ": \"" << str << "\" object created by char*\n";
 }
 
 StringBad::StringBad()
@@ -30,6 +30,19 @@ StringBad::StringBad()
 	str[3] = '\0';
 	num_strings++;
 	cout << num_strings << ": \"" << str << "\" default object created\n";
+}
+
+StringBad::StringBad(const StringBad& st)
+{
+	num_strings++;
+
+	len = st.len;
+	str = new char[len + 1];
+	for (int i = 0; i < len; i++)
+		str[i] = st.str[i]; // copy string to new storage
+	str[len] = '\0'; // terminate string
+
+	cout << num_strings << ": \"" << str << "\" object created by copy construct\n";
 }
 
 StringBad::~StringBad()

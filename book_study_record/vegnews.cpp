@@ -10,28 +10,32 @@ int main()
 	StringBad headline1("Celery Stalks at Midnight");
 	StringBad headline2("Lettuce Prey");
 	StringBad sports("Spinach Leaves Bowl for Dollars");
-	cout << "------------------------" << "\n";
+	cout << "------------------------" << "\n\n";
 
 	cout << "headline1: " << headline1 << "\n";
 	cout << "headline2: " << headline2 << "\n";
 	cout << "sports: " << sports << "\n";
-	cout << "------------------------" << "\n";
+	cout << "------------------------" << "\n\n";
 
 	callme1(headline1);
 	cout << "headline1: " << headline1 << "\n";
-	cout << "------------------------" << "\n";
+	cout << "------------------------" << "\n\n";
 
 	callme2(headline2); // 值传递会导致释放headline2.str指针所指向的内存，导致后续访问headline2.str指针时出现未定义行为
 	cout << "headline2: " << headline2 << "\n";
-	cout << "------------------------" << "\n";
+	cout << "------------------------" << "\n\n";
 
 	cout << "Initialize one object to another:\n";
-	StringBad sailor = sports;
+	StringBad sailor = sports; //calls StringBad(const StringBad& st)
 	cout << "sailor: " << sailor << "\n";
+	cout << "------------------------" << "\n\n";
+
 	cout << "Assign one object to another:\n";
 	StringBad knot;
 	knot = headline1;
 	cout << "knot: " << knot << "\n";
+	cout << "------------------------" << "\n\n";
+
 	cout << "Exiting the block.\n";
 
 	cout << "End of main()\n";

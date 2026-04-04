@@ -13,6 +13,7 @@ private:
 public:
 	StringBad(const char *s); // constructor
 	StringBad(); // default constructor
+	StringBad(const StringBad& st); // deep copy
 	~StringBad(); // destructor
 	
 	// friend function
