@@ -15,6 +15,8 @@ public:
 	StringBad(); // default constructor
 	StringBad(const StringBad& st); // deep copy
 	~StringBad(); // destructor
+
+	StringBad& operator=(const StringBad& st);
 	
 	// friend function
 	friend std::ostream &operator<<(std::ostream &os, const StringBad &st);

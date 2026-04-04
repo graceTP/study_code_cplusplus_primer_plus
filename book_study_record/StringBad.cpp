@@ -53,6 +53,22 @@ StringBad::~StringBad()
 	delete [] str;
 }
 
+StringBad& StringBad::operator=(const StringBad& st)
+{
+	if (this == &st)
+		return *this;
+
+	delete[] str;
+
+	len = st.len;
+	str = new char[len + 1];
+	for (int i = 0; i < len; i++)
+		str[i] = st.str[i]; // copy string to new storage
+	str[len] = '\0'; // terminate string
+
+	return *this;
+}
+
 std::ostream &operator<<(std::ostream &os, const StringBad &st)
 {
 	os << st.str;
