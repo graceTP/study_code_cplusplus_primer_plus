@@ -21,6 +21,8 @@ public:
 	// friend function
 	friend std::ostream &operator<<(std::ostream &os, const StringBad &st);
 
+	// function test
+	static void StringBad_test();
 };
 
 #endif // !STRINGBAD_h
