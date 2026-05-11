@@ -1,4 +1,7 @@
 #pragma once
+#ifndef TEMPMEMB_H_
+#define TEMPMEMB_H_
+
 #include <iostream>
 using std::cout;
 using std::endl;
@@ -44,4 +47,7 @@ void beta<T>::beta_test()
 	cout << "U was set to double\n";
 	cout << "Done\n";
 }
+
+
+#endif // !TEMPMEMB_H_
 
