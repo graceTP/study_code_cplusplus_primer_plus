@@ -24,6 +24,9 @@
     <ClInclude Include="ArrayTP.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="tempmemb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="StringBad.cpp">

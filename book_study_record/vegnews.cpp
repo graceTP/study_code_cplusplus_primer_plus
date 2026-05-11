@@ -1,6 +1,7 @@
 #include "StringBad.h"
 #include "stacktp.h"
 #include "ArrayTP.h"
+#include "tempmemb.h"
 
 int main()
 {
@@ -9,7 +10,10 @@ int main()
 	/*StackTP<int> st;
 	st.StackTP_test();*/
 
-	ArrayTP<int,1> at;
-	at.ArrayTP_test();
+	/*ArrayTP<int,1> at;
+	at.ArrayTP_test();*/
+
+	beta<int> bt;
+	bt.beta_test();
 
 }
