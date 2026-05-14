@@ -5,6 +5,7 @@
 #include "non-template-friend.h"
 #include "bound-template-friend.h"
 #include "unbound-template-friend.h"
+#include "queuetp.h"
 
 int main()
 {
@@ -25,7 +26,10 @@ int main()
 	//HasFriendT<int> htt;
 	//htt.HasFriendT_test();
 
-	ManyFriend<int> mt;
-	mt.ManyFriend_test();
+	/*ManyFriend<int> mt;
+	mt.ManyFriend_test();*/
+
+	QueueTP<std::string> cs(0);
+	cs.QueueTP_test();
 
 }
